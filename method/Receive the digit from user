@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+public class FindDigitsWithSwitch {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("กรอกหมายเลข: ");
+        String input = scanner.nextLine(); // อ่านข้อมูลผู้ใช้เป็น String
+        
+        // วนลูปผ่านแต่ละอักขระในข้อมูลที่ป้อน
+        for (int i = 0; i < input.length(); i++) {
+            char ch = input.charAt(i);
+            // ตรวจสอบว่าอักขระนั้นเป็นตัวเลขหรือไม่
+            if (Character.isDigit(ch)) {
+                // ใช้ switch case เพื่อจัดการกับแต่ละตัวเลข
+                switch (ch) {
+                    case '0':
+                        System.out.println("พบตัวเลข: 0 - มันคือศูนย์");
+                        break;
+                    case '1':
+                        System.out.println("พบตัวเลข: 1 - หนึ่งคือแรก");
+                        break;
+                    case '2':
+                        System.out.println("พบตัวเลข: 2 - สองคือคู่");
+                        break;
+                    case '3':
+                        System.out.println("พบตัวเลข: 3 - สามคือฝูง");
+                        break;
+                    case '4':
+                        System.out.println("พบตัวเลข: 4 - สี่คือรูปสี่เหลี่ยม");
+                        break;
+                    case '5':
+                        System.out.println("พบตัวเลข: 5 - ห้าคือมือ");
+                        break;
+                    case '6':
+                        System.out.println("พบตัวเลข: 6 - หกคือรูปหกเหลี่ยม");
+                        break;
+                    case '7':
+                        System.out.println("พบตัวเลข: 7 - เจ็ดคือโชคดี");
+                        break;
+                    case '8':
+                        System.out.println("พบตัวเลข: 8 - แปดคืออนันต์");
+                        break;
+                    case '9':
+                        System.out.println("พบตัวเลข: 9 - เก้าคือเลขหลักสุดท้าย");
+                        break;
+                    default:
+                        System.out.println("ไม่ใช่ตัวเลข");
+                }
+            }
+        }
+        
+        scanner.close(); // ปิด scanner เพื่อป้องกันการรั่วไหลของทรัพยากร
+    }
+}
