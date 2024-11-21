@@ -1,0 +1,25 @@
+public class CheckPoint_1 {
+    int money = 1;
+    public static void main(String[] args) {
+        int counter = 1;
+        int FinalValue = 1;
+        int total = 1;
+        for (int i = 1; i <= 30; i++) {
+            System.out.print("Day "+i);
+            for (int j = 0; j < 1; j++) {
+                System.out.print(" deposit "+FinalValue);
+                FinalValue = FinalValue * 2;
+                
+                for (int k = 0; k < 1; k++) {
+                    System.out.println(" total is "+total);
+                    total = (total * 2) + 1;
+                }
+            }
+        }
+
+        }       
+    }     
+
+    
+
+        
