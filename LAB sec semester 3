@@ -1,0 +1,28 @@
+import java.util.Scanner;
+import javax.sound.midi.SysexMessage;
+
+public class CheckPoint_3 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        double[][] arr =  new double[0][0];
+        System.out.println("Enter a 3-by4 matrix row by row");
+        for (int row = 0; row < 3; row++) {
+            for (int column = 0; column < 4; column++) {
+            arr[row][column]= input.nextDouble(); 
+            }
+        }
+        sumColumn(arr, columnIndex);
+        System.out.println("Sum of the elements at column 0 is " +columnIndex);
+        System.out.println("Sum of the elements at column 1 is " +columnIndex);      
+        System.out.println("Sum of the elements at column 2 is " +columnIndex);      
+        System.out.println("Sum of the elements at column 3 is " +columnIndex);            
+    }
+        public static double sumColumn(double[][] arr  , int columnIndex) {
+            double sum = 0;
+            for (int i = 0; i < 4; i++) {
+                sum = sum + arr[i][columnIndex];
+            }
+            return columnIndex;
+        }
+
+    }
